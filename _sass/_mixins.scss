@@ -1,0 +1,14 @@
+
+$ses: ();
+
+@mixin se() {
+  @media screen and (max-width: 320px) {
+    @content
+  }
+};
+
+@mixin plus() {
+  @media screen and (max-width: 414px) {
+    @content
+  }
+};

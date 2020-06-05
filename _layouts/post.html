@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<article class="post">
+    <h1 class="title">{{ page.title }}</h1>
+    <h6 class="author">
+        Writen by <span class="author-name">{{ page.author }}</span> — <span class="publish-date">June 5, 2020</span>
+    </h6>
+    {%- if page.poster -%}
+        <img class="poster" src="{{ page.poster }}">
+    {%- endif -%}
+    
+    {{ content }}
+</article>

@@ -1,0 +1,144 @@
+.container {
+  max-width: $container-max-width;
+  padding: $spacing;
+  margin: auto;
+
+  @media (min-width: $container-max-width + $spacing * 2) {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+.highlight {
+  margin-bottom: $margin-bottom;
+  overflow: scroll;
+
+  pre {
+    margin-bottom: 0px;
+  }
+
+  code {
+    line-height: initial;
+  }
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba($background-color, 0.9);
+  border-bottom: 1px solid $border-color;
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  z-index: 100;
+  
+  .wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  img {
+    padding: $spacing * 2 / 3;
+  }
+}
+
+main {
+  padding-top: 80px;
+}
+
+article.post {
+  margin-top: 40px;
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
+
+  .title {
+    font-size: $font-size * 3;
+    text-align: center;
+    margin-bottom: $spacing / 2;
+    word-wrap: break-word;
+  }
+
+  .author {
+    color: $text-color;
+    text-align: center;
+    margin-bottom: $spacing * 2;
+    
+    &-name {
+      color: $accent-color;
+    }
+  }
+
+  .publish-date {
+    font-size: $font-size;
+  }
+
+  .poster {
+    width: 140%;
+    max-width: 140%;
+    margin-left: -20%;
+    margin-bottom: $spacing * 2;
+    border-radius: 2px;
+    box-shadow: 0px 10px 10px rgba(black, 0.3);
+  }
+
+  > p:first-of-type::first-letter {
+    font-size: $font-size * 2.5;
+    font-weight: $font-weight-bold;
+    color: $text-bright-color;
+    padding-right: 1px;
+  }
+}
+
+footer {
+  font-size: $font-size * 0.8;
+  border-top: 1px solid $border-color;
+  
+  .wrapper {
+    padding: $spacing * 2 / 3;
+    text-align: center;
+  }
+
+  img.heart {
+    width: 14px;
+    height: 24px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -$spacing / 2;
+  margin-right: -$spacing / 2;
+
+  .column {
+    width: 33.33%;
+  }
+
+  article {
+    padding: $spacing / 2;
+    margin-bottom: $spacing * 4 / 5;
+
+    .thumbnail {
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: 0px 10px 10px rgba(black, 0.3);
+    }
+
+    .title {
+      font-size: $font-size * 1.5;
+      margin-top: $spacing * 2 / 3;
+      margin-bottom: $spacing / 3;
+      word-wrap: break-word;
+    }
+
+    .description {
+      font-size: round($font-size * 8 / 9);
+      line-height: $font-size * 1.5;
+      margin-bottom: 0px;
+    }
+  }
+}
