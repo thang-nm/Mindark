@@ -2,8 +2,8 @@
 layout: default
 ---
 
-
-<section class="home articles">
+<h2 class="home section-name categories text-center">Recent</h2>
+<section class="articles-recent">
   <div class="column">
     <article class="preview">
       <div class="thumbnail">
@@ -80,5 +80,19 @@ layout: default
   </div>
 </section>
 
-<section>
+{% if site.categories.first[0] %}
+<h2 class="home section-name categories text-center">Categories</h2>
+<section class="categories">
+  <div class="container names">
+    {% for c in site.categories %}
+    {% for category in site.categories %}
+      <!-- <div class="btn category-name"> -->
+        <a class="btn" href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
+          {{ category[0] | camelcase }} ({{ category[1].size }})
+        </a>
+      <!-- </div> -->
+    {% endfor %}
+    {% endfor %}
+  </div>
 </section>
+{% endif %}

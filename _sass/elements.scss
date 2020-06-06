@@ -108,7 +108,11 @@ footer {
   }
 }
 
-.articles {
+.section-name:not(:first-child) {
+  margin-top: $spacing * 2 / 3;
+}
+
+.articles-recent {
   display: flex;
   flex-wrap: wrap;
   margin-left: -$spacing / 2;
@@ -140,5 +144,19 @@ footer {
       line-height: $font-size * 1.5;
       margin-bottom: 0px;
     }
+  }
+}
+
+.categories {
+  .names {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .category-name {
+    margin-left: $spacing / 3;
+    margin-right: $spacing / 3;
+    margin-top: $spacing / 2;
   }
 }
