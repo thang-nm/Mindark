@@ -6,16 +6,10 @@ module Jekyll
     end
 
     def render(context)
-      "<p class=\"info\">#{@text}"
-    end
-  end
-
-  class UnsplashEndingTag < Liquid::Tag
-    def render(context)
-      "<p class=\"info\">#{@text}"
+      "<div class=\"unsplash\">" +
+      "</div>"
     end
   end
 end
 
 Liquid::Template.register_tag('unsplash', Jekyll::UnsplashTag)
-Liquid::Template.register_tag('endunplash', Jekyll::UnsplashEndingTag)
