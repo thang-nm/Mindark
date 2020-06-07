@@ -5,7 +5,7 @@
 .btn {
   display: inline-block;
   white-space: nowrap;
-  padding: ($spacing / 2) ($spacing * 2 / 3);
+  padding: $spacing * 0.4 $spacing * 0.5;
   background-color: $code-background-color;
   font-weight: $font-weight-bold;
   border-radius: 4px;

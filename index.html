@@ -2,97 +2,28 @@
 layout: default
 ---
 
-<h2 class="home section-name categories text-center">Recent</h2>
-<section class="articles-recent">
+<h2 class="home section-name categories text-center">Articles</h2>
+<section class="articles">
+  {%- assign column = 3 -%}
+  {%- assign maxIndex = column - 1 -%}
+  {%- for index in (0..maxIndex) -%}
   <div class="column">
+    {%- for post in site.posts -%}
+    {%- assign mod = forloop.index | modulo: column -%}
+    {%- if mod == index -%}
     <article class="preview">
       <div class="thumbnail">
-        <a class="post-link" href="{{ site.posts[0].url | relative_url }}">
-          <img src="{{ site.posts[0].poster }}">
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <img src="{{ post.poster }}">
         </a>
       </div>
-      <a class="post-link" href="{{ site.posts[0].url | relative_url }}">
-        <h2 class="title">{{ site.posts[0].title }}</h2>
+      <a class="post-link" href="{{ post.url | relative_url }}">
+        <h2 class="title">{{ post.title }}</h2>
       </a>
-      <p class="description">{{ site.posts[0].excerpt }}</p>
+      <p class="description">{{ post.excerpt }}</p>
     </article>
-    <article class="preview">
-      <div class="thumbnail">
-        <a class="post-link" href="{{ site.posts[3].url | relative_url }}">
-          <img src="{{ site.posts[3].poster }}">
-        </a>
-      </div>
-      <a class="post-link" href="{{ site.posts[3].url | relative_url }}">
-        <h2 class="title">{{ site.posts[3].title }}</h2>
-      </a>
-      <p class="description">{{ site.posts[3].excerpt }}</p>
-    </article>
+    {%- endif -%}
+    {%- endfor -%}
   </div>
-
-  <div class="column">
-    <article class="preview">
-      <div class="thumbnail">
-        <a class="post-link" href="{{ site.posts[1].url | relative_url }}">
-          <img src="{{ site.posts[1].poster }}">
-        </a>
-      </div>
-      <a class="post-link" href="{{ site.posts[1].url | relative_url }}">
-        <h2 class="title">{{ site.posts[1].title }}</h2>
-      </a>
-      <p class="description">{{ site.posts[1].excerpt }}</p>
-    </article>
-    <article class="preview">
-      <div class="thumbnail">
-        <a class="post-link" href="{{ site.posts[4].url | relative_url }}">
-          <img src="{{ site.posts[4].poster }}">
-        </a>
-      </div>
-      <a class="post-link" href="{{ site.posts[4].url | relative_url }}">
-        <h2 class="title">{{ site.posts[4].title }}</h2>
-      </a>
-      <p class="description">{{ site.posts[4].excerpt }}</p>
-    </article>
-  </div>
-
-  <div class="column">
-    <article class="preview">
-      <div class="thumbnail">
-        <a class="post-link" href="{{ site.posts[2].url | relative_url }}">
-          <img src="{{ site.posts[2].poster }}">
-        </a>
-      </div>
-      <a class="post-link" href="{{ site.posts[2].url | relative_url }}">
-        <h2 class="title">{{ site.posts[2].title }}</h2>
-      </a>
-      <p class="description">{{ site.posts[2].excerpt }}</p>
-    </article>
-    <article class="preview">
-      <div class="thumbnail">
-        <a class="post-link" href="{{ site.posts[5].url | relative_url }}">
-          <img src="{{ site.posts[5].poster }}">
-        </a>
-      </div>
-      <a class="post-link" href="{{ site.posts[5].url | relative_url }}">
-        <h2 class="title">{{ site.posts[5].title }}</h2>
-      </a>
-      <p class="description">{{ site.posts[5].excerpt }}</p>
-    </article>
-  </div>
+  {%- endfor -%}
 </section>
-
-{% if site.categories.first[0] %}
-<h2 class="home section-name categories text-center">Categories</h2>
-<section class="categories">
-  <div class="container names">
-    {% for c in site.categories %}
-    {% for category in site.categories %}
-      <!-- <div class="btn category-name"> -->
-        <a class="btn" href="#{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">
-          {{ category[0] | camelcase }} ({{ category[1].size }})
-        </a>
-      <!-- </div> -->
-    {% endfor %}
-    {% endfor %}
-  </div>
-</section>
-{% endif %}

@@ -199,16 +199,9 @@ a {
   text-decoration: none;
   color: $link-color;
 
-  > img {
-    transition: all 0.3s;
-  }
-
   &:hover {
     > * {
       color: $accent-color !important;
-    }
-    > img {
-      transform: scale(1.1);
     }
   }
 
