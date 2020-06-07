@@ -116,6 +116,10 @@ blockquote {
     }
     
     margin-bottom: 0px;
+
+    > code::first-letter {
+      font-size: inherit;
+    }
   }
 }
 

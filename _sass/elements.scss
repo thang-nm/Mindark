@@ -144,6 +144,7 @@ footer {
       margin-top: $spacing * 2 / 3;
       margin-bottom: $spacing / 3;
       word-wrap: break-word;
+      transition: all 0.5s;
     }
 
     .description {
