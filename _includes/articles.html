@@ -1,0 +1,25 @@
+<h2 class="home section-name categories text-center">Articles</h2>
+<section class="articles">
+  {%- assign column = 3 -%}
+  {%- assign maxIndex = column | minus: 1 -%}
+  {%- for index in (0..maxIndex) -%}
+    <div class="column">
+      {%- for post in site.posts -%}
+      {%- assign mod = forloop.index0 | modulo: column -%}
+        {%- if mod == index -%}
+          <article class="preview">
+            <div class="thumbnail">
+              <a class="post-link" href="{{ post.url | relative_url }}">
+                <img src="{{ post.poster | relative_url }}">
+              </a>
+            </div>
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              <h2 class="title">{{ post.title }}</h2>
+            </a>
+            <p class="description">{{ post.excerpt }}</p>
+          </article>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+  {%- endfor -%}
+</section>

@@ -2,14 +2,22 @@
 layout: default
 ---
 
-<article class="post">
+<div class="container post">
+  <article>
     <h1 class="title">{{ page.title }}</h1>
     <h6 class="author">
-        Writen by <span class="author-name">{{ page.author }}</span> — <span class="publish-date">June 5, 2020</span>
+      {%- if page.author -%}
+        Writen by <span class="author-name">{{ page.author }}</span>—
+      {%- endif -%}
+      <span class="publish-date">June 5, 2020</span>
     </h6>
     {%- if page.poster -%}
-        <img class="poster" src="{{ page.poster }}">
+      <img class="poster" src="{{ page.poster }}">
     {%- endif -%}
-    
     {{ content }}
-</article>
+  </article>
+  <div class="divider">The end</div>
+  <h2 class="text-center">Related</h2>
+  <div class="articles">
+  </div>
+</div>

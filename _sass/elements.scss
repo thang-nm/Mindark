@@ -45,47 +45,51 @@ main {
   padding-top: 80px;
 }
 
-article.post {
+.container.post {
   margin-top: 40px;
   max-width: 880px;
   margin-left: auto;
   margin-right: auto;
+}
 
-  .title {
-    font-size: $font-size * 3;
-    text-align: center;
-    margin-bottom: $spacing / 2;
-    word-wrap: break-word;
-  }
-
-  .author {
-    color: $text-color;
-    text-align: center;
-    margin-bottom: $spacing * 2;
-    
-    &-name {
-      color: $accent-color;
+.post {
+  article {
+    .title {
+      font-size: $font-size * 3;
+      text-align: center;
+      margin-bottom: $spacing / 2;
+      word-wrap: break-word;
     }
-  }
 
-  .publish-date {
-    font-size: $font-size;
-  }
+    .author {
+      color: $text-color;
+      text-align: center;
+      margin-bottom: $spacing * 2;
+      
+      &-name {
+        color: $accent-color;
+      }
+    }
 
-  .poster {
-    width: 140%;
-    max-width: 140%;
-    margin-left: -20%;
-    margin-bottom: $spacing * 2;
-    border-radius: 2px;
-    box-shadow: 0px 10px 10px rgba(black, 0.3);
-  }
+    .publish-date {
+      font-size: $font-size;
+    }
 
-  > p:first-of-type::first-letter {
-    font-size: $font-size * 2.5;
-    font-weight: $font-weight-bold;
-    color: $text-bright-color;
-    padding-right: 1px;
+    .poster {
+      width: 140%;
+      max-width: 140%;
+      margin-left: -20%;
+      margin-bottom: $spacing * 2;
+      border-radius: 2px;
+      box-shadow: 0px 10px 10px rgba(black, 0.3);
+    }
+
+    > p:first-of-type::first-letter {
+      font-size: $font-size * 2.5;
+      font-weight: $font-weight-bold;
+      color: $text-bright-color;
+      padding-right: 1px;
+    }
   }
 }
 
@@ -152,5 +156,32 @@ footer {
       line-height: $font-size * 1.5;
       margin-bottom: 0px;
     }
+  }
+}
+
+.divider {
+  display: table;
+  white-space: nowrap;
+  height: auto;
+  margin: '';
+  line-height: 1;
+  text-align: center;
+
+  &::before {
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
+  }
+
+  &::after {
+    content: '';
+    display: table-cell;
+    position: relative;
+    top: 50%;
+    width: 50%;
+    background-repeat: no-repeat;
   }
 }
