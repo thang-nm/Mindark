@@ -6,14 +6,14 @@ layout: default
   <article>
     <h1 class="title">{{ page.title }}</h1>
     <h6 class="author">
-      {%- if page.author -%}
-        Writen by <span class="author-name">{{ page.author }}</span>—
-      {%- endif -%}
+      {% if page.author %}
+        Writen by <span class="author-name">{{ page.author }}</span> —
+      {% endif %}
       <span class="publish-date">June 5, 2020</span>
     </h6>
-    {%- if page.poster -%}
+    {% if page.poster %}
       <img class="poster" src="{{ page.poster }}">
-    {%- endif -%}
+    {% endif %}
     {{ content }}
   </article>
 </div>

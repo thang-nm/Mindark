@@ -171,28 +171,27 @@ footer {
 }
 
 .divider {
-  display: table;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
   white-space: nowrap;
-  height: auto;
-  margin: '';
-  line-height: 1;
-  text-align: center;
+  flex-grow: 1;
+  color: $text-bright-color;
+  font-size: $font-size - 3;
+
+  &::before, &::after {
+    content: '';
+    height: 1px;
+    background-color: lighten($border-color, $amount: 5);
+    flex: 1 0 auto;
+  }
 
   &::before {
-    content: '';
-    display: table-cell;
-    position: relative;
-    top: 50%;
-    width: 50%;
-    background-repeat: no-repeat;
+    margin-right: $spacing / 2;
   }
 
   &::after {
-    content: '';
-    display: table-cell;
-    position: relative;
-    top: 50%;
-    width: 50%;
-    background-repeat: no-repeat;
+    margin-left: $spacing / 2;
   }
 }
