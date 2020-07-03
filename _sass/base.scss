@@ -91,13 +91,15 @@ p {
 }
 
 em {
-  font-style: initial;
+  font-family: $font-family-italic;
 }
 
 blockquote {
   position: relative;
   padding-left: $spacing / 1.25;
   margin-bottom: $spacing * 2 / 3;
+  font-style: italic;
+  font-family: $font-family-italic;
 
   &:before {
     content: " ";
@@ -111,7 +113,7 @@ blockquote {
   }
 
   p {
-    &::first-letter {
+    &:first-child::first-letter {
       font-size: 1.5 * $font-size;
     }
     

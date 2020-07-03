@@ -47,7 +47,7 @@ main {
 
 .container.post {
   margin-top: 40px;
-  max-width: 880px;
+  max-width: 860px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -98,15 +98,23 @@ footer {
   border-top: 1px solid $border-color;
   
   .wrapper {
-    padding: $spacing * 2 / 3;
+    padding: $spacing $spacing / 2;
     text-align: center;
+  }
+
+  img.code {
+    width: 16px;
+    height: auto;
+    padding-bottom: 4px;
+    padding-right: 3px;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   img.heart {
     width: 14px;
-    height: 24px;
-    padding-left: 6px;
-    padding-right: 6px;
+    padding-left: 3px;
+    padding-right: 3px;
     display: inline-block;
     vertical-align: middle;
   }
@@ -124,6 +132,10 @@ footer {
 
   .column {
     width: 33.33%;
+
+    @media (max-width: 480px) {
+      width: 100%;
+    }
   }
 
   article {
@@ -148,7 +160,6 @@ footer {
       margin-top: $spacing * 2 / 3;
       margin-bottom: $spacing / 3;
       word-wrap: break-word;
-      transition: all 0.5s;
     }
 
     .description {
