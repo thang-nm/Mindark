@@ -1,7 +1,8 @@
 $md-yellow: $accent-color;
+$md-dark  : #343a40;
 $md-blue  : #339af0;
-$md-gray  : #495057;
-$md-red   : #ff8787;
+$md-gray  : #adb5bd;
+$md-red   : #ff6b6b;
 $md-pink  : #f783ac;
 $md-grape : #da77f2;
 $md-violet: #9775fa;
@@ -13,67 +14,67 @@ $md-lime  : #a9e34b;
 $md-orange: #ffa94d;
 $md-brown : #A1694E;
 
-$md-code-c   : $text-color; // Comment
-$md-code-err : $text-color; // Error
-$md-code-o   : $text-color; // Operator
-$md-code-cm  : $md-gray; // Comment.Multiline
-$md-code-cp  : $md-gray; // Comment.Preproc
-$md-code-c1  : $md-gray; // Comment.Single
-$md-code-cs  : $md-gray; // Comment.Special
-$md-code-gd  : $text-color; // Generic.Deleted
-$md-code-gd-x: $text-color; // Generic.Deleted.Specific
-$md-code-ge  : $text-color; // Generic.Emph
-$md-code-gr  : $text-color; // Generic.Error
-$md-code-gh  : $text-color; // Generic.Heading
-$md-code-gi  : $text-color; // Generic.Inserted
-$md-code-gi-x: $text-color; // Generic.Inserted.Specific
-$md-code-go  : $text-color; // Generic.Output
-$md-code-gp  : $text-color; // Generic.Prompt
-$md-code-gs  : $text-color; // Generic.Strong
-$md-code-gu  : $text-color; // Generic.Subheading
-$md-code-gt  : $text-color; // Generic.Traceback
-$md-code-k   : $md-yellow; // Keyword
-$md-code-kc  : $md-green; // Keyword.Constant
-$md-code-kd  : $md-yellow; // Keyword.Declaration
+$md-code-c   : $md-gray; // Comment
+$md-code-err : $md-gray; // Error
+$md-code-o   : $md-cyan; // Operator
+$md-code-cm  : $md-dark; // Comment.Multiline
+$md-code-cp  : $md-dark; // Comment.Preproc
+$md-code-c1  : $md-dark; // Comment.Single
+$md-code-cs  : $md-dark; // Comment.Special
+$md-code-gd  : $md-gray; // Generic.Deleted
+$md-code-gd-x: $md-gray; // Generic.Deleted.Specific
+$md-code-ge  : $md-gray; // Generic.Emph
+$md-code-gr  : $md-gray; // Generic.Error
+$md-code-gh  : $md-gray; // Generic.Heading
+$md-code-gi  : $md-gray; // Generic.Inserted
+$md-code-gi-x: $md-gray; // Generic.Inserted.Specific
+$md-code-go  : $md-gray; // Generic.Output
+$md-code-gp  : $md-gray; // Generic.Prompt
+$md-code-gs  : $md-gray; // Generic.Strong
+$md-code-gu  : $md-gray; // Generic.Subheading
+$md-code-gt  : $md-gray; // Generic.Traceback
+$md-code-k   : $md-green; // Keyword
+$md-code-kc  : $md-gray; // Keyword.Constant
+$md-code-kd  : $md-green; // Keyword.Declaration
 $md-code-kp  : $md-green; // Keyword.Pseudo
 $md-code-kr  : $md-green; // Keyword.Reserved
-$md-code-kt  : $md-green; // Keyword.Type
-$md-code-m   : $text-color; // Literal.Number
-$md-code-s   : $text-color; // Literal.String
-$md-code-n   : $text-color; //
-$md-code-na  : $text-color; // Name.Attribute
-$md-code-nb  : $text-color; // Name.Builtin
-$md-code-nc  : $text-color; // Name.Class
-$md-code-no  : $text-color; // Name.Constant
-$md-code-ni  : $text-color; // Name.Entity
-$md-code-ne  : $text-color; // Name.Exception
-$md-code-nf  : $md-grape; // Name.Function
-$md-code-nn  : $text-color; // Name.Namespace
-$md-code-nt  : $text-color; // Name.Tag
-$md-code-nv  : $md-blue; // Name.Variable
-$md-code-ow  : $text-color; // Operator.Word
-$md-code-w   : $text-color; // Text.Whitespace
-$md-code-mf  : $text-color; // Literal.Number.Float
-$md-code-mh  : $text-color; // Literal.Number.Hex
-$md-code-mi  : $text-color; // Literal.Number.Integer
-$md-code-mo  : $text-color; // Literal.Number.Oct
-$md-code-sb  : $text-color; // Literal.String.Backtick
-$md-code-sc  : $text-color; // Literal.String.Char
-$md-code-sd  : $text-color; // Literal.String.Doc
-$md-code-s2  : $text-color; // Literal.String.Double
-$md-code-se  : $text-color; // Literal.String.Escape
-$md-code-sh  : $text-color; // Literal.String.Heredoc
-$md-code-si  : $text-color; // Literal.String.Interpol
-$md-code-sx  : $text-color; // Literal.String.Other
-$md-code-sr  : $text-color; // Literal.String.Regex
-$md-code-s1  : $text-color; // Literal.String.Single
-$md-code-ss  : $text-color; // Literal.String.Symbol
-$md-code-bp  : $text-color; // Name.Builtin.Pseudo
-$md-code-vc  : $text-color; // Name.Variable.Class
-$md-code-vg  : $text-color; // Name.Variable.Global
-$md-code-vi  : $text-color; // Name.Variable.Instance
+$md-code-kt  : $md-yellow; // Keyword.Type
+$md-code-m   : $md-gray; // Literal.Number
+$md-code-s   : $md-gray; // Literal.String
+$md-code-n   : $md-gray; //
+$md-code-na  : $md-gray; // Name.Attribute
+$md-code-nb  : $md-gray; // Name.Builtin
+$md-code-nc  : $md-gray; // Name.Class
+$md-code-no  : $md-gray; // Name.Constant
+$md-code-ni  : $md-gray; // Name.Entity
+$md-code-ne  : $md-gray; // Name.Exception
+$md-code-nf  : $md-violet; // Name.Function
+$md-code-nn  : $md-gray; // Name.Namespace
+$md-code-nt  : $md-gray; // Name.Tag
+$md-code-nv  : $md-gray; // Name.Variable
+$md-code-ow  : $md-gray; // Operator.Word
+$md-code-w   : $md-gray; // Text.Whitespace
+$md-code-mf  : $md-gray; // Literal.Number.Float
+$md-code-mh  : $md-gray; // Literal.Number.Hex
+$md-code-mi  : $md-gray; // Literal.Number.Integer
+$md-code-mo  : $md-gray; // Literal.Number.Oct
+$md-code-sb  : $md-gray; // Literal.String.Backtick
+$md-code-sc  : $md-gray; // Literal.String.Char
+$md-code-sd  : $md-gray; // Literal.String.Doc
+$md-code-s2  : $md-gray; // Literal.String.Double
+$md-code-se  : $md-gray; // Literal.String.Escape
+$md-code-sh  : $md-gray; // Literal.String.Heredoc
+$md-code-si  : $md-gray; // Literal.String.Interpol
+$md-code-sx  : $md-gray; // Literal.String.Other
+$md-code-sr  : $md-gray; // Literal.String.Regex
+$md-code-s1  : $md-gray; // Literal.String.Single
+$md-code-ss  : $md-gray; // Literal.String.Symbol
+$md-code-bp  : $md-gray; // Name.Builtin.Pseudo
+$md-code-vc  : $md-gray; // Name.Variable.Class
+$md-code-vg  : $md-gray; // Name.Variable.Global
+$md-code-vi  : $md-gray; // Name.Variable.Instance
 $md-code-il  : $md-orange; // Literal.Number.Integer.Long
-$md-code-p   : $md-orange;
+$md-code-p   : $md-brown;
 
 .highlight {
   .c     { color: $md-code-c   ; }
@@ -136,5 +137,5 @@ $md-code-p   : $md-orange;
   .vg    { color: $md-code-vg  ; }
   .vi    { color: $md-code-vi  ; }
   .il    { color: $md-code-il  ; }
-  .p     { color: $md-brown    ; }
+  .p     { color: $md-code-p   ; }
 }

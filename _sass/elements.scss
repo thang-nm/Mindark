@@ -1,3 +1,22 @@
+.text-center {
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  white-space: nowrap;
+  padding: $spacing * 0.4 $spacing * 0.5;
+  background-color: $code-background-color;
+  font-weight: $font-weight-bold;
+  border-radius: 4px;
+  transition: all 0.5s;
+
+  &:hover {
+    color: black;
+    background-color: $accent-color;
+  }
+}
+
 .container {
   max-width: $container-max-width;
   padding: $spacing;
@@ -151,12 +170,13 @@ footer {
 
     .thumbnail {
       overflow: hidden;
-      border-radius: 3px;
-      box-shadow: 0px 10px 10px rgba(black, 0.3);
+      border-radius: 5px;
+      box-shadow: 0px 10px 10px rgba(black, 0.15);
+      background-color: #1b1e21;
     }
 
     .title {
-      font-size: $font-size * 1.5;
+      font-size: $font-size * 1.25;
       margin-top: $spacing * 2 / 3;
       margin-bottom: $spacing / 3;
       word-wrap: break-word;
