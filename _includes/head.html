@@ -7,8 +7,8 @@
   {%- feed_meta -%}
   {%- include icon.html -%}
   {%- include font.html -%}
-  <link rel="stylesheet" href="{{ "/assets/css/mindark.css" | relative_url }}">
-  <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/mindark.css?v=0.1.1" | relative_url }}">
+  {%- include style.html -%}
   {%- if jekyll.environment == 'production' and site.analytics -%}
     {%- include analytics.html -%}
   {%- endif -%}

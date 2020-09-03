@@ -1,8 +1,8 @@
 $margin-bottom: $spacing * 4 / 5;
 
 html {
-  background-color: $background-color;
   color: $text-color;
+  background-color: $background-color;
   font-family: $font-family;
   font-size: $font-size;
   font-weight: $font-weight-normal;
@@ -16,6 +16,8 @@ body {
   margin: 0;
   padding: 0;
   min-width: $min-body-width;
+  color: $text-color;
+  background-color: $background-color;
 }
 
 h1, h2, h3, h4, h5, h6, ul, ol, p, blockquote, pre {
@@ -86,7 +88,7 @@ p {
   + h1 {
     margin-top: $spacing * 2.25;
   }
-  
+
   + h2 {
     margin-top: $spacing * 1.75;
   }
@@ -103,12 +105,20 @@ em {
   font-family: $font-family-italic;
 }
 
+section {
+  margin-top: $spacing * 2;
+  @media screen and (max-width: $medium-breakpoint - 1) {
+    margin-top: $spacing;
+  }
+}
+
 blockquote {
   position: relative;
   padding-left: $spacing / 1.25;
   margin-bottom: $spacing * 2 / 3;
   font-style: italic;
   font-family: $font-family-italic;
+  letter-spacing: 0.5px;
 
   &:before {
     content: " ";
@@ -125,7 +135,7 @@ blockquote {
     &:first-child::first-letter {
       font-size: 1.5 * $font-size;
     }
-    
+
     margin-bottom: 0px;
 
     > code::first-letter {
@@ -136,7 +146,7 @@ blockquote {
 
 ul {
   padding-left: $spacing * 2 / 3;
-  
+
   li {
     margin-bottom: $margin-bottom / 1.5;
     line-height: $font-size * 1.5;
@@ -146,7 +156,7 @@ ul {
       line-height: initial;
     }
   }
-  
+
   ol, ul {
     margin-top: $margin-bottom / 1.5;
   }
@@ -154,17 +164,17 @@ ul {
 
 ol {
   padding-left: 26px;
-  
+
   li {
     margin-bottom: $margin-bottom / 1.5;
     line-height: $font-size * 1.5;
-    
+
     p {
       margin: 0;
       line-height: initial;
     }
   }
-  
+
   ol, ul {
     margin-top: $margin-bottom / 1.5;
   }
@@ -174,7 +184,7 @@ pre {
   padding: $spacing / 3 $spacing / 2;
   font-family: $font-monospace;
   font-size: $font-size - 3;
-  font-variant-ligatures: common-ligatures; 
+  font-variant-ligatures: common-ligatures;
   line-height: round(($font-size - 2) * 1.6);
   background-color: $code-background-color;
   margin-bottom: $spacing / 2;
@@ -202,15 +212,15 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: $margin-bottom;
-  
+
   td, th {
     border: 1px solid $border-color;
   }
-  
+
   td {
     padding: ($spacing / 2.5) ($spacing / 1.5);
   }
-  
+
   th {
     color: $text-bright-color;
     font-weight: $font-weight-bold;
@@ -232,12 +242,6 @@ a {
   &:visited {
     color: $link-visited-color;
   }
-}
-
-img {
-  max-width: 100%;
-  display: block;
-  margin: auto;
 }
 
 ::selection {
